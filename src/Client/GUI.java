@@ -45,6 +45,16 @@ public class GUI implements ActionListener, Constantes{
 
         target = new Target();
 
+        //Modificacion - Creacion Nuevo Dot
+
+        dot = new Dot();
+
+        Server server = new Server(dot);
+        Thread hilo = new Thread(server);
+        hilo.start();
+
+        moveDot();
+        run();
 
     }
 
